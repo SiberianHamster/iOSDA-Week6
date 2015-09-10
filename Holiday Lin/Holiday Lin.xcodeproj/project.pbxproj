@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AEA8C6001BA0189B0027BBF3 /* HotelListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA8C5FF1BA0189B0027BBF3 /* HotelListViewController.m */; };
+		AEA8C6021BA07C260027BBF3 /* hotels.json in Resources */ = {isa = PBXBuildFile; fileRef = AEA8C6011BA07C260027BBF3 /* hotels.json */; };
+		AEB9481A1BA1CE3F008F3904 /* Hotel.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB948191BA1CE3F008F3904 /* Hotel.m */; };
+		AEB9481D1BA1CE3F008F3904 /* Reservation.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB9481C1BA1CE3F008F3904 /* Reservation.m */; };
+		AEB948201BA1CE3F008F3904 /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB9481F1BA1CE3F008F3904 /* Room.m */; };
+		AEB948231BA1CE40008F3904 /* Guest.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB948221BA1CE40008F3904 /* Guest.m */; };
+		AED7A8371B9E9F1500D37A14 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AED7A8361B9E9F1500D37A14 /* main.m */; };
+		AED7A83A1B9E9F1500D37A14 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AED7A8391B9E9F1500D37A14 /* AppDelegate.m */; };
+		AED7A83D1B9E9F1500D37A14 /* Holiday_Lin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AED7A83B1B9E9F1500D37A14 /* Holiday_Lin.xcdatamodeld */; };
+		AED7A8401B9E9F1500D37A14 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AED7A83F1B9E9F1500D37A14 /* ViewController.m */; };
+		AED7A8451B9E9F1500D37A14 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AED7A8441B9E9F1500D37A14 /* Images.xcassets */; };
+		AED7A8481B9E9F1500D37A14 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AED7A8461B9E9F1500D37A14 /* LaunchScreen.xib */; };
+		AED7A8541B9E9F1500D37A14 /* Holiday_LinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AED7A8531B9E9F1500D37A14 /* Holiday_LinTests.m */; };
+		AED7ACC21B9F66F0006D65FE /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AED7ACC11B9F66F0006D65FE /* MainMenuViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AED7A84E1B9E9F1500D37A14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AED7A8291B9E9F1500D37A14 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AED7A8301B9E9F1500D37A14;
+			remoteInfo = "Holiday Lin";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AEA8C5FE1BA0189B0027BBF3 /* HotelListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotelListViewController.h; sourceTree = "<group>"; };
+		AEA8C5FF1BA0189B0027BBF3 /* HotelListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelListViewController.m; sourceTree = "<group>"; };
+		AEA8C6011BA07C260027BBF3 /* hotels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hotels.json; sourceTree = "<group>"; };
+		AEB948181BA1CE3F008F3904 /* Hotel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hotel.h; sourceTree = "<group>"; };
+		AEB948191BA1CE3F008F3904 /* Hotel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hotel.m; sourceTree = "<group>"; };
+		AEB9481B1BA1CE3F008F3904 /* Reservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reservation.h; sourceTree = "<group>"; };
+		AEB9481C1BA1CE3F008F3904 /* Reservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reservation.m; sourceTree = "<group>"; };
+		AEB9481E1BA1CE3F008F3904 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Room.h; sourceTree = "<group>"; };
+		AEB9481F1BA1CE3F008F3904 /* Room.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Room.m; sourceTree = "<group>"; };
+		AEB948211BA1CE40008F3904 /* Guest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Guest.h; sourceTree = "<group>"; };
+		AEB948221BA1CE40008F3904 /* Guest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Guest.m; sourceTree = "<group>"; };
+		AED7A8311B9E9F1500D37A14 /* Holiday Lin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Holiday Lin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AED7A8351B9E9F1500D37A14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AED7A8361B9E9F1500D37A14 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AED7A8381B9E9F1500D37A14 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AED7A8391B9E9F1500D37A14 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AED7A83C1B9E9F1500D37A14 /* Holiday_Lin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Holiday_Lin.xcdatamodel; sourceTree = "<group>"; };
+		AED7A83E1B9E9F1500D37A14 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AED7A83F1B9E9F1500D37A14 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AED7A8441B9E9F1500D37A14 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AED7A8471B9E9F1500D37A14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		AED7A84D1B9E9F1500D37A14 /* Holiday LinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Holiday LinTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AED7A8521B9E9F1500D37A14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AED7A8531B9E9F1500D37A14 /* Holiday_LinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Holiday_LinTests.m; sourceTree = "<group>"; };
+		AED7ACC01B9F66F0006D65FE /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
+		AED7ACC11B9F66F0006D65FE /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AED7A82E1B9E9F1500D37A14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AED7A84A1B9E9F1500D37A14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AED7A8281B9E9F1500D37A14 = {
+			isa = PBXGroup;
+			children = (
+				AEB948211BA1CE40008F3904 /* Guest.h */,
+				AEB948221BA1CE40008F3904 /* Guest.m */,
+				AEB9481E1BA1CE3F008F3904 /* Room.h */,
+				AEB9481F1BA1CE3F008F3904 /* Room.m */,
+				AEB9481B1BA1CE3F008F3904 /* Reservation.h */,
+				AEB9481C1BA1CE3F008F3904 /* Reservation.m */,
+				AEB948181BA1CE3F008F3904 /* Hotel.h */,
+				AEB948191BA1CE3F008F3904 /* Hotel.m */,
+				AED7A8331B9E9F1500D37A14 /* Holiday Lin */,
+				AED7A8501B9E9F1500D37A14 /* Holiday LinTests */,
+				AED7A8321B9E9F1500D37A14 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AED7A8321B9E9F1500D37A14 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AED7A8311B9E9F1500D37A14 /* Holiday Lin.app */,
+				AED7A84D1B9E9F1500D37A14 /* Holiday LinTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AED7A8331B9E9F1500D37A14 /* Holiday Lin */ = {
+			isa = PBXGroup;
+			children = (
+				AEA8C6011BA07C260027BBF3 /* hotels.json */,
+				AED7A8381B9E9F1500D37A14 /* AppDelegate.h */,
+				AED7A8391B9E9F1500D37A14 /* AppDelegate.m */,
+				AED7A83E1B9E9F1500D37A14 /* ViewController.h */,
+				AED7A83F1B9E9F1500D37A14 /* ViewController.m */,
+				AEA8C5FE1BA0189B0027BBF3 /* HotelListViewController.h */,
+				AEA8C5FF1BA0189B0027BBF3 /* HotelListViewController.m */,
+				AED7ACC01B9F66F0006D65FE /* MainMenuViewController.h */,
+				AED7ACC11B9F66F0006D65FE /* MainMenuViewController.m */,
+				AED7A8441B9E9F1500D37A14 /* Images.xcassets */,
+				AED7A8461B9E9F1500D37A14 /* LaunchScreen.xib */,
+				AED7A83B1B9E9F1500D37A14 /* Holiday_Lin.xcdatamodeld */,
+				AED7A8341B9E9F1500D37A14 /* Supporting Files */,
+			);
+			path = "Holiday Lin";
+			sourceTree = "<group>";
+		};
+		AED7A8341B9E9F1500D37A14 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AED7A8351B9E9F1500D37A14 /* Info.plist */,
+				AED7A8361B9E9F1500D37A14 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AED7A8501B9E9F1500D37A14 /* Holiday LinTests */ = {
+			isa = PBXGroup;
+			children = (
+				AED7A8531B9E9F1500D37A14 /* Holiday_LinTests.m */,
+				AED7A8511B9E9F1500D37A14 /* Supporting Files */,
+			);
+			path = "Holiday LinTests";
+			sourceTree = "<group>";
+		};
+		AED7A8511B9E9F1500D37A14 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AED7A8521B9E9F1500D37A14 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AED7A8301B9E9F1500D37A14 /* Holiday Lin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AED7A8571B9E9F1500D37A14 /* Build configuration list for PBXNativeTarget "Holiday Lin" */;
+			buildPhases = (
+				AED7A82D1B9E9F1500D37A14 /* Sources */,
+				AED7A82E1B9E9F1500D37A14 /* Frameworks */,
+				AED7A82F1B9E9F1500D37A14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Holiday Lin";
+			productName = "Holiday Lin";
+			productReference = AED7A8311B9E9F1500D37A14 /* Holiday Lin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AED7A84C1B9E9F1500D37A14 /* Holiday LinTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AED7A85A1B9E9F1500D37A14 /* Build configuration list for PBXNativeTarget "Holiday LinTests" */;
+			buildPhases = (
+				AED7A8491B9E9F1500D37A14 /* Sources */,
+				AED7A84A1B9E9F1500D37A14 /* Frameworks */,
+				AED7A84B1B9E9F1500D37A14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AED7A84F1B9E9F1500D37A14 /* PBXTargetDependency */,
+			);
+			name = "Holiday LinTests";
+			productName = "Holiday LinTests";
+			productReference = AED7A84D1B9E9F1500D37A14 /* Holiday LinTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AED7A8291B9E9F1500D37A14 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Mark Lin";
+				TargetAttributes = {
+					AED7A8301B9E9F1500D37A14 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					AED7A84C1B9E9F1500D37A14 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = AED7A8301B9E9F1500D37A14;
+					};
+				};
+			};
+			buildConfigurationList = AED7A82C1B9E9F1500D37A14 /* Build configuration list for PBXProject "Holiday Lin" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AED7A8281B9E9F1500D37A14;
+			productRefGroup = AED7A8321B9E9F1500D37A14 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AED7A8301B9E9F1500D37A14 /* Holiday Lin */,
+				AED7A84C1B9E9F1500D37A14 /* Holiday LinTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AED7A82F1B9E9F1500D37A14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEA8C6021BA07C260027BBF3 /* hotels.json in Resources */,
+				AED7A8481B9E9F1500D37A14 /* LaunchScreen.xib in Resources */,
+				AED7A8451B9E9F1500D37A14 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AED7A84B1B9E9F1500D37A14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AED7A82D1B9E9F1500D37A14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEB948201BA1CE3F008F3904 /* Room.m in Sources */,
+				AED7A83A1B9E9F1500D37A14 /* AppDelegate.m in Sources */,
+				AED7ACC21B9F66F0006D65FE /* MainMenuViewController.m in Sources */,
+				AEA8C6001BA0189B0027BBF3 /* HotelListViewController.m in Sources */,
+				AED7A8371B9E9F1500D37A14 /* main.m in Sources */,
+				AED7A8401B9E9F1500D37A14 /* ViewController.m in Sources */,
+				AEB948231BA1CE40008F3904 /* Guest.m in Sources */,
+				AEB9481D1BA1CE3F008F3904 /* Reservation.m in Sources */,
+				AEB9481A1BA1CE3F008F3904 /* Hotel.m in Sources */,
+				AED7A83D1B9E9F1500D37A14 /* Holiday_Lin.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AED7A8491B9E9F1500D37A14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AED7A8541B9E9F1500D37A14 /* Holiday_LinTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AED7A84F1B9E9F1500D37A14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AED7A8301B9E9F1500D37A14 /* Holiday Lin */;
+			targetProxy = AED7A84E1B9E9F1500D37A14 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AED7A8461B9E9F1500D37A14 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AED7A8471B9E9F1500D37A14 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AED7A8551B9E9F1500D37A14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AED7A8561B9E9F1500D37A14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AED7A8581B9E9F1500D37A14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "Holiday Lin/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Holiday Lin/Holiday Lin-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AED7A8591B9E9F1500D37A14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "Holiday Lin/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Holiday Lin/Holiday Lin-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		AED7A85B1B9E9F1500D37A14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Holiday LinTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Holiday Lin.app/Holiday Lin";
+			};
+			name = Debug;
+		};
+		AED7A85C1B9E9F1500D37A14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Holiday LinTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Holiday Lin.app/Holiday Lin";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AED7A82C1B9E9F1500D37A14 /* Build configuration list for PBXProject "Holiday Lin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AED7A8551B9E9F1500D37A14 /* Debug */,
+				AED7A8561B9E9F1500D37A14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AED7A8571B9E9F1500D37A14 /* Build configuration list for PBXNativeTarget "Holiday Lin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AED7A8581B9E9F1500D37A14 /* Debug */,
+				AED7A8591B9E9F1500D37A14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AED7A85A1B9E9F1500D37A14 /* Build configuration list for PBXNativeTarget "Holiday LinTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AED7A85B1B9E9F1500D37A14 /* Debug */,
+				AED7A85C1B9E9F1500D37A14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AED7A83B1B9E9F1500D37A14 /* Holiday_Lin.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AED7A83C1B9E9F1500D37A14 /* Holiday_Lin.xcdatamodel */,
+			);
+			currentVersion = AED7A83C1B9E9F1500D37A14 /* Holiday_Lin.xcdatamodel */;
+			path = Holiday_Lin.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = AED7A8291B9E9F1500D37A14 /* Project object */;
+}

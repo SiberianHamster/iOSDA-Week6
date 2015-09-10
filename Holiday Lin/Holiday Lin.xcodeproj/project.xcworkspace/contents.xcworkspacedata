@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:../Hotel.h">
+   </FileRef>
+   <FileRef
+      location = "group:../Hotel.m">
+   </FileRef>
+   <FileRef
+      location = "group:../Room.h">
+   </FileRef>
+   <FileRef
+      location = "group:../Room.m">
+   </FileRef>
+   <FileRef
+      location = "group:../Guest.h">
+   </FileRef>
+   <FileRef
+      location = "group:../Guest.m">
+   </FileRef>
+   <FileRef
+      location = "group:../Reservation.h">
+   </FileRef>
+   <FileRef
+      location = "group:../Reservation.m">
+   </FileRef>
+   <FileRef
+      location = "self:Holiday Lin.xcodeproj">
+   </FileRef>
+</Workspace>
