@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "AppDelegate.h"
 #import "Hotel.h"
+#import "Room.h"
 #import "HotelListViewController.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
@@ -85,7 +86,7 @@
   
   Hotel *asdf = self.hotels[indexPath.row];
   
-  NSLog(@"Hotel array: %lu",(unsigned long)asdf.room.count);
+  NSLog(@"Room Count: %lu",(unsigned long)asdf.room.count);
   
 //  [self.navigationController showDetailViewController:hotelListViewController sender: self];
   [self.navigationController pushViewController:hotelListViewController animated:YES];

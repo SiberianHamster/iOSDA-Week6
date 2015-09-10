@@ -164,25 +164,17 @@
       hotel.location = hotels[x][@"location"];
       
       
-      NSArray *rooms = [[rootObject objectForKey:@"rooms"] allObjects];
-      for (int x=0; x<[rooms count]; x++) {
-      Room *room = [NSEntityDescription insertNewObjectForEntityForName:@"rooms" inManagedObjectContext:self.managedObjectContext];
-        room.number = rooms[x][@"number"];
-        room.beds = rooms[x][@"beds"];
-        room.rate =rooms[x][@"rate"];
-      }
-    
-  
+      NSArray *rooms = [[hotels[x] objectForKey:@"rooms"] allObjects];
+      for (int y = 0; y < [rooms count]; y++) {
+        
+      
+      Room *room = [NSEntityDescription insertNewObjectForEntityForName:@"Room" inManagedObjectContext:self.managedObjectContext];
+        room.number = rooms[y][@"number"];
+        room.beds = rooms[y][@"beds"];
+        room.rate =rooms[y][@"rate"];
+        room.hotel = hotel;
+      
     }
-    
-    
-
-    
-
-    
-    
-    
-    
     
         if (jsonError) {
           return;
@@ -225,6 +217,7 @@
   
   
   }
-}
 
+  }
+}
 @end
