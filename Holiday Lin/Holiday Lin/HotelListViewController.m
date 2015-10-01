@@ -50,8 +50,8 @@
   self.tableView.dataSource  = self;
   [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"RoomCell"];
   
-  self.rooms = [self.hotel.room allObjects];
-  NSLog(@"Rooms: %lu",(unsigned long)self.rooms.count);
+  self.rooms = [self.hotel.rooms allObjects];
+//  NSLog(@"Rooms: %lu",(unsigned long)self.rooms.count);
 
     // Do any additional setup after loading the view.
 }

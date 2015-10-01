@@ -9,7 +9,9 @@
 #import "AppDelegate.h"
 #import "Hotel.h"
 #import "Room.h"
+#import "MainMenuViewController.h"
 #import "ViewController.h"
+#import "ReservationViewController.h"
 
 @interface AppDelegate ()
 
@@ -23,7 +25,7 @@
   self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
   [self.window makeKeyAndVisible];
   
-  ViewController *rootVC = [[ViewController alloc]init];
+  MainMenuViewController *rootVC = [[MainMenuViewController alloc]init];
   UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:rootVC];
   self.window.rootViewController = navController;
   

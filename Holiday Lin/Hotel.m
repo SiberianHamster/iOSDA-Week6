@@ -2,7 +2,7 @@
 //  Hotel.m
 //  Holiday Lin
 //
-//  Created by Mark Lin on 9/10/15.
+//  Created by Mark Lin on 9/14/15.
 //  Copyright (c) 2015 Mark Lin. All rights reserved.
 //
 
@@ -12,9 +12,9 @@
 
 @implementation Hotel
 
+@dynamic location;
 @dynamic name;
 @dynamic stars;
-@dynamic location;
-@dynamic room;
+@dynamic rooms;
 
 @end

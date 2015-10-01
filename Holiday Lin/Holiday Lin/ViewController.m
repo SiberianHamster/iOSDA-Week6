@@ -86,7 +86,7 @@
   
   Hotel *asdf = self.hotels[indexPath.row];
   
-  NSLog(@"Room Count: %lu",(unsigned long)asdf.room.count);
+  NSLog(@"Room Count: %lu",(unsigned long)asdf.rooms.count);
   
 //  [self.navigationController showDetailViewController:hotelListViewController sender: self];
   [self.navigationController pushViewController:hotelListViewController animated:YES];
