@@ -10,11 +10,13 @@
 #import "AppDelegate.h"
 #import "Room.h"
 #import "ConfirmReservationViewController.h"
+#import "Reservation.h"
 
 @interface ResultsViewController()<UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate>
 @property (strong, nonatomic)UITableView *tableView;
 @property (strong, nonatomic)Room *listrooms;
 @property (strong, nonatomic)Room *room;
+@property (strong, nonatomic) NSFetchRequest *fetchRequest;
 
 @end
 
@@ -52,28 +54,58 @@
     return _fetchedResultsController;
   }
   
+  AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
   
-  NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-  NSEntityDescription *entity = [NSEntityDescription
-                                 entityForName:@"Room" inManagedObjectContext: _managedObjectContext];
-  [fetchRequest setEntity:entity];
+  NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Reservation"];
   
-  NSSortDescriptor *sort = [[NSSortDescriptor alloc]
-                            initWithKey:@"number" ascending:NO];
-  [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sort]];
+  NSPredicate *predicate = [NSPredicate predicateWithFormat:@"startDate <= %@ AND endDate >= %@",self.endDate,self.startDate];
   
-  [fetchRequest setFetchBatchSize:20];
+  request.predicate = predicate;
   
-  NSFetchedResultsController *theFetchedResultsController =
-  [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
-                                      managedObjectContext:_managedObjectContext sectionNameKeyPath:nil
-                                                 cacheName:@"date"];
-  self.fetchedResultsController = theFetchedResultsController;
-  _fetchedResultsController.delegate = self;
+  NSError *fetchError;
+  NSArray *results = [appDelegate.managedObjectContext executeFetchRequest:request error:&fetchError];
   
-  return _fetchedResultsController;
+  NSMutableArray *badRooms = [[NSMutableArray alloc]init];
+  for (Reservation *reservation in results) {
+    [badRooms addObject:reservation.room];
+  }
   
+  NSFetchRequest *finalRequest = [NSFetchRequest fetchRequestWithEntityName:@"Room"];
+  NSPredicate *finalPredicate = [NSPredicate predicateWithFormat:@"NOT self IN %@", badRooms];
+  finalRequest.predicate = finalPredicate;
+  
+  NSError *finalError;
+  
+  NSArray *finalResults = [appDelegate.managedObjectContext executeFetchRequest:finalRequest error:&finalError];
+  
+  if (finalError) {
+    return nil;
+  }
+  return finalResults;
 }
+  
+  
+  
+//  self.fetchRequest = [[NSFetchRequest alloc] init];
+//  NSEntityDescription *entity = [NSEntityDescription
+//                                 entityForName:@"Room" inManagedObjectContext: _managedObjectContext];
+//  [self.fetchRequest setEntity:entity];
+//  
+//  NSSortDescriptor *sort = [[NSSortDescriptor alloc]
+//                            initWithKey:@"number" ascending:NO];
+//  [self.fetchRequest setSortDescriptors:[NSArray arrayWithObject:sort]];
+//  
+//  [self.fetchRequest setFetchBatchSize:20];
+//  
+//  NSFetchedResultsController *theFetchedResultsController =
+//  [[NSFetchedResultsController alloc] initWithFetchRequest:self.fetchRequest
+//                                      managedObjectContext:_managedObjectContext sectionNameKeyPath:nil
+//                                                 cacheName:@"date"];
+//  self.fetchedResultsController = theFetchedResultsController;
+//  _fetchedResultsController.delegate = self;
+//  
+//  return _fetchedResultsController;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
