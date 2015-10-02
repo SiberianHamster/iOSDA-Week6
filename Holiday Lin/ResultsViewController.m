@@ -17,6 +17,7 @@
 @property (strong, nonatomic)Room *listrooms;
 @property (strong, nonatomic)Room *room;
 @property (strong, nonatomic) NSFetchRequest *fetchRequest;
+@property (strong, nonatomic) NSArray *filteredArray;
 
 @end
 
@@ -24,6 +25,8 @@
 @implementation ResultsViewController
 //@synthesize fetchedResultsController = _fetchedResultsController;
 
+
+#pragma mark - LoadView
 -(void)loadView{
   
   UIView *rootView = [[UIView alloc]init];
@@ -42,17 +45,38 @@
   
   NSArray *tableViewVertical = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[tableView]-|" options:0 metrics:nil views:views];
   [rootView addConstraints:tableViewVertical];
-  
-  
-  
   self.view = rootView;
 }
 
-- (NSFetchedResultsController *)fetchedResultsController {
+#pragma mark - ViewDidLoad
+- (void)viewDidLoad {
+  [super viewDidLoad];
+  self.tableView.delegate = self;
+  self.tableView.dataSource = self;
+  NSLog(@"startDate in res: %@", self.startDate);
+  NSLog(@"endDate in res: %@", self.endDate);
   
-  if (_fetchedResultsController != nil) {
-    return _fetchedResultsController;
-  }
+  [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
+  
+  AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+  _managedObjectContext = appDelegate.managedObjectContext;
+  
+  [self fetchedResultsController];
+  
+  //  NSError *error;
+  //  if (![[self fetchedResultsController] performFetch:&error]) {
+  //    NSLog(@"There was an error: %@, %@", error, [error userInfo]);
+  //    exit(-1);
+  //  }
+  // Do any additional setup after loading the view.
+}
+
+#pragma -fetchedResultsController
+- (NSArray *)fetchedResultsController {
+  
+//  if (_fetchedResultsController != nil) {
+//    return _fetchedResultsController;
+//  }
   
   AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
   
@@ -107,46 +131,12 @@
 //  return _fetchedResultsController;
 
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-  self.tableView.delegate = self;
-  self.tableView.dataSource = self;
-  NSLog(@"startDate in res: %@", self.startDate);
-  NSLog(@"endDate in res: %@", self.endDate);
-  
-  [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
-    
-  AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-  _managedObjectContext = appDelegate.managedObjectContext;
-  
-  NSError *error;
-   NSLog(@"test");
-  if (![[self fetchedResultsController] performFetch:&error]) {
-    NSLog(@"There was an error: %@, %@", error, [error userInfo]);
-    exit(-1);
-  }
-    // Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (void)viewDidUnload {
   self.fetchedResultsController = nil;
 }
 
+#pragma mark -TableView
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section {
   id  sectionInfo =
@@ -233,7 +223,6 @@
   confirmReservationViewController.endDate = self.endDate;
   
   [self.navigationController pushViewController:confirmReservationViewController animated:true];
-  
 }
 
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
