@@ -61,18 +61,15 @@
   AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
   _managedObjectContext = appDelegate.managedObjectContext;
   
-  [self fetchedResultsController];
-  
-  //  NSError *error;
-  //  if (![[self fetchedResultsController] performFetch:&error]) {
-  //    NSLog(@"There was an error: %@, %@", error, [error userInfo]);
-  //    exit(-1);
-  //  }
+    NSError *error;
+    if (![[self fetchedResultsController] performFetch:&error]) {
+//      exit(-1);
+    }
   // Do any additional setup after loading the view.
 }
 
 #pragma -fetchedResultsController
-- (NSArray *)fetchedResultsController {
+- (NSFetchedResultsController *)fetchedResultsController {
   
 //  if (_fetchedResultsController != nil) {
 //    return _fetchedResultsController;
@@ -98,14 +95,17 @@
   NSPredicate *finalPredicate = [NSPredicate predicateWithFormat:@"NOT self IN %@", badRooms];
   finalRequest.predicate = finalPredicate;
   
-  NSError *finalError;
   
-  NSArray *finalResults = [appDelegate.managedObjectContext executeFetchRequest:finalRequest error:&finalError];
   
-  if (finalError) {
-    return nil;
-  }
-  return finalResults;
+  
+//  NSError *finalError;
+//  
+//  NSArray *finalResults = [appDelegate.managedObjectContext executeFetchRequest:finalRequest error:&finalError];
+//  
+//  if (finalError) {
+//    return nil;
+//  }
+//  return finalResults;
 }
   
   
