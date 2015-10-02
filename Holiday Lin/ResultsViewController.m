@@ -63,7 +63,7 @@
   
     NSError *error;
     if (![[self fetchedResultsController] performFetch:&error]) {
-//      exit(-1);
+      exit(-1);
     }
   // Do any additional setup after loading the view.
 }
@@ -96,6 +96,22 @@
   finalRequest.predicate = finalPredicate;
   
   
+  NSSortDescriptor *sort = [[NSSortDescriptor alloc]
+                            initWithKey:@"number" ascending:NO];
+  [finalRequest setSortDescriptors:[NSArray arrayWithObject:sort]];
+  
+  [finalRequest setFetchBatchSize:20];
+  
+  NSFetchedResultsController *theFetchedResultsController =
+  [[NSFetchedResultsController alloc] initWithFetchRequest: finalRequest
+                                      managedObjectContext:_managedObjectContext sectionNameKeyPath:nil
+                                                 cacheName:nil];
+  self.fetchedResultsController = theFetchedResultsController;
+  _fetchedResultsController.delegate = self;
+  
+  return _fetchedResultsController;
+
+  
   
   
 //  NSError *finalError;
@@ -115,20 +131,6 @@
 //                                 entityForName:@"Room" inManagedObjectContext: _managedObjectContext];
 //  [self.fetchRequest setEntity:entity];
 //  
-//  NSSortDescriptor *sort = [[NSSortDescriptor alloc]
-//                            initWithKey:@"number" ascending:NO];
-//  [self.fetchRequest setSortDescriptors:[NSArray arrayWithObject:sort]];
-//  
-//  [self.fetchRequest setFetchBatchSize:20];
-//  
-//  NSFetchedResultsController *theFetchedResultsController =
-//  [[NSFetchedResultsController alloc] initWithFetchRequest:self.fetchRequest
-//                                      managedObjectContext:_managedObjectContext sectionNameKeyPath:nil
-//                                                 cacheName:@"date"];
-//  self.fetchedResultsController = theFetchedResultsController;
-//  _fetchedResultsController.delegate = self;
-//  
-//  return _fetchedResultsController;
 
 
 
