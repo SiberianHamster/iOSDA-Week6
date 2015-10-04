@@ -97,7 +97,7 @@
   
   
   NSSortDescriptor *sort = [[NSSortDescriptor alloc]
-                            initWithKey:@"number" ascending:NO];
+                            initWithKey:@"number" ascending:YES];
   [finalRequest setSortDescriptors:[NSArray arrayWithObject:sort]];
   
   [finalRequest setFetchBatchSize:20];

@@ -10,6 +10,7 @@
 #import "ViewController.h"
 #import "HotelListViewController.h"
 #import "ReservationViewController.h"
+#import "SearchedBookedViewController.h"
 
 @interface MainMenuViewController ()
 @property (strong, nonatomic) UIButton *hotelList;
@@ -67,7 +68,7 @@
   
   [self.hotelList addTarget:self action:@selector(goToHotelList:) forControlEvents:UIControlEventTouchUpInside];
 [self.reservation addTarget:self action:@selector(goToReservation:) forControlEvents:UIControlEventTouchUpInside];
-[self.searchBooked addTarget:self action:@selector(goToSearchBooked:) forControlEvents:UIControlEventTouchUpInside];
+[self.searchBooked addTarget:self action:@selector(goToSearchedBooked:) forControlEvents:UIControlEventTouchUpInside];
   
   self.view = rootView;
   
@@ -81,6 +82,11 @@
 -(void)goToReservation:(id)sender{
   ReservationViewController *reservationVC = [[ReservationViewController alloc]init];
   [self.navigationController pushViewController:reservationVC animated:true];
+}
+
+-(void)goToSearchedBooked:(id)sender{
+  SearchedBookedViewController *searchBookedVC = [[SearchedBookedViewController alloc]init];
+  [self.navigationController pushViewController:searchBookedVC animated:true];
 }
 
 - (void)viewDidLoad {
